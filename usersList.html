@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!-- saved from url=(0033)http://kpdecker.github.io/jsdiff/ -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+	<title>Tier 4 Admin</title>
+
+<link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/3.6.10/firebase.js"></script>
+
+	<link rel="stylesheet" href="style.css">
+
+<style>
+
+.user{
+	padding-top: 2%;
+}
+
+.row
+{
+ padding-bottom: 8px;
+ font-size: larger;
+ max-width: 100%;
+ padding-left: 4%;
+}
+#user_email{
+	font-family: 'Nunito', sans-serif;
+	color: #FFF;
+	font-size: 25px;
+	padding: 15px;
+	display: inline-block;
+	vertical-align: middle;
+}
+#signout{
+	float: right;
+	font-family: 'Nunito', sans-serif;
+	color: #FFF;
+	border:1px solid;
+	margin:10px;
+	font-size: 25px;
+	border-color: #FFF;
+	padding: 5px;
+	background-color: Transparent;
+}
+
+#signout:hover {
+	cursor: pointer;
+	color: #00BFA5;
+	background-color: #FFF;
+}
+.loader {
+	border: 16px solid #f3f3f3;
+	border-radius: 50%;
+	border-top: 16px solid #00BFA5;
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	margin-top: 200px;
+	-webkit-animation: spin 2s linear infinite;
+	animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+.showImageButton
+{
+	font-family: 'Nunito', sans-serif;
+	color: #00BFA5;
+	border: 1px solid;
+	font-size: 17px;
+	border-color: #00BFA5;
+	background-color: Transparent;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.showImageButton:hover {
+    font-family: 'Nunito', sans-serif;
+    color: #FFF;
+    background-color: #00BFA5;
+}
+a{
+color: #00BFA5;
+text-decoration: none;
+}
+.redirectbutton a{
+	font-family: 'Nunito', sans-serif;
+  color: #00BFA5;
+  border:2px solid;
+  font-size: 25px;
+  margin:30px;
+  border-color: #00BFA5;
+  background-color: Transparent;
+  padding: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.redirectbutton a:hover{
+  cursor: pointer;
+  color: #FFF !important;
+  background-color: #00BFA5 !important;
+}
+</style>
+
+
+</head>
+
+<body>
+
+	<div class="container" style="background-color:#00BFA5;font-family: 'Nunito', sans-serif;width:100%; margin:autoStart">
+		    <div class="row">
+		          <span id="user_email"></span>
+		          <button type="button" id="signout">Log Out</button> <br>
+		    </div>
+	</div>
+<br><br>
+
+<div class="redirectbutton"><a href="main.html">Main Page</a></div>
+
+<div class="navigation">
+	<div class="loader" id="loaderUser"></div>
+
+	<div id="users" class="users">
+	  <div class="row user">
+	      <div class="col-md-3" style="font-size:20px"><b>Name</b></div>
+	      <div class="col-md-3" style="font-size:20px"><b>Email</b></div>
+	      <div class="col-md-2" style="font-size:20px"><b>Contact Number</b></div>
+	      <div class="col-md-2" style="font-size:20px"><b>Roll No</b></div>
+	      <div class="col-md-2" style="font-size:20px"><b>Image</b></div>
+	  </div>
+
+	</div>
+
+</div>
+
+	<script src="config.js"></script>
+	<script src="common.js"></script>
+	<script src="usersList.js"></script>
+
+
+</body>
+</html>
