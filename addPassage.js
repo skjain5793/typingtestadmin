@@ -14,11 +14,11 @@ var model = {
                         updates['/Passages/'+ postKey] = postData;
                         firebase.database().ref().update(updates).then(function()
                         {
-                              presenter .passageAdded();
+                              presenter .addPassageSucess();
                         })
                         .catch(function(error)
                         {
-                              return presenter .passageNotAdded(error);
+                              return presenter .addPassageError(error);
                         });
               }
 };
@@ -42,10 +42,10 @@ var presenter = {
                               model.addPassage(passagecode,passagetext);
                           }
                   },
-    passageNotAdded    : function(error){
+    addPassageError    : function(error){
                           view.showError(error);
                   },
-    passageAdded  : function(email){
+    addPassageSucess  : function(email){
                           view.showSuccessDiv();
                   },
     getCurrentUser : function(){

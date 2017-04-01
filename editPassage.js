@@ -10,10 +10,10 @@ var model = {
                           function(error)
                           {
                                     if (error) {
-                                    presenter.errorOccured(error);
+                                    presenter.editPassageError(error);
                                     }
                                     else {
-                                    presenter.passageEditedSuccessfully();
+                                    presenter.editPassageSuccess();
                                     }
                           });
               }
@@ -33,10 +33,10 @@ var presenter = {
                               model.editPassage(passagetext);
                           }
                   },
-    errorOccured    : function(error){
+    editPassageError    : function(error){
                           view.showError(error);
                   },
-    passageEditedSuccessfully  : function(email){
+    editPassageSuccess  : function(email){
                           view.showSuccessDiv();
                   },
     getCurrentUser : function(){
